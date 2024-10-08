@@ -1,0 +1,64 @@
+<body style="
+    background: #595959;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Arial';
+">
+    <div id="panel" style="
+        width: 120px;
+        height: 97.5%;
+        background: white;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 12px;
+        flex-direction: column;
+        align-content: center;
+        position: fixed;
+        left: 0;
+        box-shadow: 0 0 16px;
+        z-index: 5;
+    ">
+        <button id="parse_button" style="
+            width: 80%;
+            height: 36px;
+        ">Parse</button>
+
+        <button id="delete_unused_files_button" style="
+            width: 80%;
+            height: 36px;
+        ">Delete unused files</button>
+    </div>
+
+    <div id="main-content" style="display: flex;flex-direction: column;flex-wrap: wrap;"></div>
+
+    <div id="popup" style="display: none; position: absolute; z-index: 10;top: 100px; left: calc(50% - 160px); background: white; padding: 0 8px 8px; border-radius: 8px;box-shadow: 1px 1px 8px;">
+        <div style="padding: 4px;position: relative;">
+            <div class="title" style="line-height: 2;"></div>
+
+            <input class="input" style="width: 100%" />
+            <div style="position: absolute; top: 0; right: 0;">
+                <div class="close" style="font-size: 19px;padding: 0 2px;cursor: pointer;display: inline-block;vertical-align: top;">x</div>
+            </div>
+        </div>
+
+        <div>
+            <button class="back_button">Back</button>
+            <label style="border: 1px solid #ccc;border-radius: 4px;"><input class="should_parse" type="checkbox"/>Parse file</label>
+            <label style="border: 1px solid #ccc;border-radius: 4px;"><input class="include_libs" type="checkbox" name="libs"/>Libs</label>
+            <label style="border: 1px solid #ccc;border-radius: 4px;"><input class="include_@" type="checkbox" name="@"/>@</label>
+            <label style="border: 1px solid #ccc;border-radius: 4px;"><input class="include_json" type="checkbox" name="json"/>.json</label>
+            <label style="border: 1px solid #ccc;border-radius: 4px;"><input class="include_css" type="checkbox" name="css"/>.css</label>
+        </div>
+
+        <div class="content" style="
+            margin-top: 8px;
+            min-width: 300px;
+            min-height: 200px;
+            background: #ccc;
+            border-radius: 8px;
+            position: relative;
+        "></div>
+    </div>
+</body>
